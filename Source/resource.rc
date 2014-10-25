@@ -1,0 +1,22 @@
+#include <windows.h>
+
+#include "resource.h"
+
+IDR_MYMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+    	MENUITEM "&Open...\tCtrl+O", ID_FILE_OPEN
+        MENUITEM "E&xit\tAlt+F4", ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+    	MENUITEM "Refresh\tF5", ID_EDIT_REFRESH
+    END
+END
+
+Accelerators ACCELERATORS
+BEGIN
+	"O", ID_FILE_OPEN, CONTROL, VIRTKEY
+	VK_F5, ID_EDIT_REFRESH, VIRTKEY
+END

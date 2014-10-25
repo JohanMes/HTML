@@ -1,0 +1,44 @@
+body {
+    background-color:black;
+    color:maroon;
+}
+
+#header {
+    background-color:red;
+    color:white;
+    width:100%;
+}
+
+#content {
+    background-color:green;
+    color:white;
+    margin-left:5%;
+    margin-right:5%;
+    height:300px;
+    border-color:white;
+    border-width:2px;
+}
+
+#footer {
+    background-color:blue;
+    color:white;
+    margin-top:5px;
+    margin-left:4%;
+    margin-right:4%;
+}
+
+html {
+    color:black;
+    width:100%;
+    height:100%;
+    margin-left:5px;
+    margin-top:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    font:Times New Roman;
+    font-size:12;
+    background-color:white;
+    border-color:white;
+    font-color:black;
+}
+

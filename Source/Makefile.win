@@ -1,0 +1,75 @@
+# Project: HTML
+# Makefile created by Dev-C++ 5.8.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = obj/HTML_private.res
+OBJ      = obj/main.o obj/HTMLParser.o obj/utils.o obj/Tag.o obj/Property.o obj/Drawer.o obj/Color.o obj/Length.o obj/CSSParser.o obj/Style.o obj/Page.o obj/Snippet.o obj/Rect.o obj/Pen.o obj/Font.o $(RES)
+LINKOBJ  = obj/main.o obj/HTMLParser.o obj/utils.o obj/Tag.o obj/Property.o obj/Drawer.o obj/Color.o obj/Length.o obj/CSSParser.o obj/Style.o obj/Page.o obj/Snippet.o obj/Rect.o obj/Pen.o obj/Font.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -s
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = ../HTML.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+obj/main.o: main.cpp
+	$(CPP) -c main.cpp -o obj/main.o $(CXXFLAGS)
+
+obj/HTMLParser.o: HTMLParser.cpp
+	$(CPP) -c HTMLParser.cpp -o obj/HTMLParser.o $(CXXFLAGS)
+
+obj/utils.o: utils.cpp
+	$(CPP) -c utils.cpp -o obj/utils.o $(CXXFLAGS)
+
+obj/Tag.o: Tag.cpp
+	$(CPP) -c Tag.cpp -o obj/Tag.o $(CXXFLAGS)
+
+obj/Property.o: Property.cpp
+	$(CPP) -c Property.cpp -o obj/Property.o $(CXXFLAGS)
+
+obj/Drawer.o: Drawer.cpp
+	$(CPP) -c Drawer.cpp -o obj/Drawer.o $(CXXFLAGS)
+
+obj/Color.o: Color.cpp
+	$(CPP) -c Color.cpp -o obj/Color.o $(CXXFLAGS)
+
+obj/Length.o: Length.cpp
+	$(CPP) -c Length.cpp -o obj/Length.o $(CXXFLAGS)
+
+obj/CSSParser.o: CSSParser.cpp
+	$(CPP) -c CSSParser.cpp -o obj/CSSParser.o $(CXXFLAGS)
+
+obj/Style.o: Style.cpp
+	$(CPP) -c Style.cpp -o obj/Style.o $(CXXFLAGS)
+
+obj/Page.o: Page.cpp
+	$(CPP) -c Page.cpp -o obj/Page.o $(CXXFLAGS)
+
+obj/Snippet.o: Snippet.cpp
+	$(CPP) -c Snippet.cpp -o obj/Snippet.o $(CXXFLAGS)
+
+obj/Rect.o: Rect.cpp
+	$(CPP) -c Rect.cpp -o obj/Rect.o $(CXXFLAGS)
+
+obj/Pen.o: Pen.cpp
+	$(CPP) -c Pen.cpp -o obj/Pen.o $(CXXFLAGS)
+
+obj/Font.o: Font.cpp
+	$(CPP) -c Font.cpp -o obj/Font.o $(CXXFLAGS)
+
+obj/HTML_private.res: HTML_private.rc 
+	$(WINDRES) -i HTML_private.rc --input-format=rc -o obj/HTML_private.res -O coff 
+

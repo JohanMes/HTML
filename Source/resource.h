@@ -1,0 +1,6 @@
+#define IDR_MYMENU   101
+
+#define ID_FILE_OPEN 1001
+#define ID_FILE_EXIT 1002
+
+#define ID_EDIT_REFRESH 2001

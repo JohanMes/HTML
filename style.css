@@ -1,0 +1,26 @@
+body {
+	background-color:black;
+	color:maroon;
+}
+
+#header {
+	background-color:red;
+	color:white;
+	width:100%;
+}
+#content {
+	background-color:green;
+	color:white;
+	margin-left:5%;
+	margin-right:5%;
+	height:300px;
+	border-color:white;
+	border-width:2px;
+}
+#footer {
+	background-color:blue;
+	color:white;
+	margin-top:5px;
+	margin-left:4%;
+	margin-right:4%;
+}
